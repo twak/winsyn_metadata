@@ -82,9 +82,9 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
 * _metadata_location_
     * Describes location of photographs
     * _locations_data.json_ contains the per-batch location information used for creating per-image location description files.
-    * The locations are of varying degrees of accuracy. Source be coarse (located only by a named city), camera (a GPS location captured by the camera), or track (a location computed from the photograph time and a separately captured GPS track). Several batches have no geolocation information available.
+    * The locations are of varying degrees of accuracy. The image source can be _coarse_ (located only by a named city), _camera_ (a GPS location captured by the camera), or _track_ (a location computed from the photograph time and a separately captured GPS track). Several batches have no geolocation information available.
 
-Can be generated from the above:
+The following can be generated from the above:
 
 
 
@@ -101,10 +101,7 @@ Can be generated from the above:
 
 **Scripts from the [code repository](https://github.com/twak/fast_crop/blob/master/build_website.py)**
 
-These scripts expect to be run from the data directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by a vcs. \
-
-
-
+These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by a vcs. 
 
 * [process_labels.py](https://github.com/twak/fast_crop/blob/master/process_labels.py) has two functions:
     * creates image datasets using the crop (metadata_single_elements) data.
@@ -113,7 +110,7 @@ These scripts expect to be run from the data directory - they tend not to take c
     * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver, e.g., Apache.
 * [fast_crop.py](https://github.com/twak/fast_crop/blob/master/crop_tool.py)
     * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
-    * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material) are quite irregular.
+    * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
     * the entire photo can also be annotated with 
         * _deleted - _the photo has been deleted from the dataset due to poor quality, containing no windows, or only containing windows repeated elsewhere in the batch
         * _rot90, rot180, rot270 _- the photo has been manually rotated before cropping (after any exif-encoded rotate has been applied).
