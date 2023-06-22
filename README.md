@@ -60,9 +60,8 @@ Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
     * A minority of the freelance photographers did not follow this document (or indeed create images of professional quality).
     * The uncompressed RAW photos should also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB Disk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
 
+
 Available from the [metadata repository](https://github.com/twak/winsyn_metadata):
-
-
 
 * _metadata_single_elements_
     * The crop information to identify single rectangular samples of windows.
@@ -84,9 +83,8 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
     * _locations_data.json_ contains the per-batch location information used for creating per-image location description files.
     * The locations are of varying degrees of accuracy. The image source can be _coarse_ (located only by a named city), _camera_ (a GPS location captured by the camera), or _track_ (a location computed from the photograph time and a separately captured GPS track). Several batches have no geolocation information available.
 
+
 The following can be generated from the above:
-
-
 
 * _metadata_website_
     * The website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
@@ -119,16 +117,13 @@ These scripts expect to be run from the `data` directory - they tend not to take
 * [summary.py](https://github.com/twak/fast_crop/blob/master/summary.py), 
     * outputs various statistics for the whole dataset.
 * figure_many_xxx.py
-    * scripts used to create the figures for the paper. \
+    * scripts used to create the figures for the paper.
 
 
- \
 **Other notes**
 
-
-
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
-* The batches started as a day of photography (for tom and michaella) or a contract (1 or 2 thousand images) for the upwork freelancers. The roughly correlate to the 
+* The batches started as a day of photography (for tom and michaella) or a contract (1 or 2 thousand images) for the upwork freelancers. 
 * The "tom_archive_xxx" folders are images taken before the project started and are from a variety of hardware and locations. Mostly we don't have location information for these.
 * The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world.
-* The guidance documents provided to the photographers and labellers evolved as edge-cases and issues with data collection were identified. For example, specific instructions for labelling unusual  classes of windows from Egypt were added. The dates of major changes are noted at the top of these documents.
+* The guidance documents provided to the photographers and labellers evolved as edge-cases and issues with data collection were identified. For example, specific instructions for labelling unusual configurations of sunshades and Egyptian windows were added. The dates of major changes are noted at the top of these documents.
