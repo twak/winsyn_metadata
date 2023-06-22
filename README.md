@@ -78,7 +78,7 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
     * These labels mostly should not overlap.
 * _metadata_window_labels_2_
     * Per-pixel Labels created by LYD for the next 6000 images. Annotated for 13 (14 including _none_) classes. 
-    * These labels are defined with a z-order and overlap - they are rendered using this order to create the per-pixel labels. These are 
+    * These labels are defined with a z-order and overlap - they are rendered using this order to create the per-pixel labels.
 * _metadata_location_
     * Describes location of photographs
     * _locations_data.json_ contains the per-batch location information used for creating per-image location description files.
