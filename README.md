@@ -5,12 +5,13 @@
 <p style="text-align: right">
 <strong>WinSyn Dataset Description</strong></p>
 
-WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. \
- \
-**File organisation** \
- \
-The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  \
- \
+WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. 
+
+ 
+**File organisation** 
+
+The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  
+ 
 The contents of the folders are divided into _batches_ (subfolders) such as _tom_london_20220418_ for easier processing. They are named for the first name of the photographer, principal location, and date. For example, metadata relating to the image:
 
  _data/photos/tom_london_20220418/IMG_0206.JPG_ 
@@ -19,18 +20,17 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: \
+where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
- \
-**Where to get the data** \
- \
+**Where to get the data** 
+ 
 The project's data and code is split between different sources. Binary formatted JPG images are available from the Kaust data repository, while metadata and source code is available from our Github repos. 
 
-Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. \
- \
+Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. 
+
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 
 * _photos_
@@ -72,8 +72,8 @@ The following can be generated from the above:
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
     * _metadata_website/_crops.html similarly shows an icon for each crop.
     * _metadata_website/map _shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
-* _data_cook_{time.time}_
-    * Datasets of images cropped to particular sizes with or without accompanying labels by the [process_labels.py](https://github.com/twak/fast_crop/blob/master/process_labels.py) script.
+* _winsyn_cook_{time.time}.zip_
+    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py)  script.
 * _metadata_location_
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
 
@@ -97,7 +97,6 @@ These scripts expect to be run from the `data` directory - they tend not to take
     * outputs various statistics for the whole dataset.
 * figure_many_xxx.py
     * scripts used to create the figures for the paper.
-
 
 **Other notes**
 
