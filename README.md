@@ -5,30 +5,13 @@
 <p style="text-align: right">
 <strong>WinSyn Dataset Description</strong></p>
 
+WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. 
 
-Todo before release
+ 
+**File organisation** 
 
-
-
-* strip location?
-    * gpx files
-    * exif locations
-* remove identifying objects:
-    * faces
-    * number plates
-    * phone numbers
-* process all JPGs
-    * strip all exif
-    * remove deleted
-    * apply rotation
-* or do we force a contract on the data-users to avoid releasing such examples?
-
-WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. \
- \
-**File organisation** \
- \
-The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  \
- \
+The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  
+ 
 The contents of the folders are divided into _batches_ (subfolders) such as _tom_london_20220418_ for easier processing. They are named for the first name of the photographer, principal location, and date. For example, metadata relating to the image:
 
  _data/photos/tom_london_20220418/IMG_0206.JPG_ 
@@ -37,28 +20,24 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: \
+where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
- \
-**Where to get the data** \
- \
+**Where to get the data** 
+ 
 The project's data and code is split between different sources. Binary formatted JPG images are available from the Kaust data repository, while metadata and source code is available from our Github repos. 
 
-Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. \
- \
+Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. 
+
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
-
-
 
 * _photos_
     * The photos (in JPG) format
     * Any GPS tracks recorded during photo creation. These have assorted names. 
-    * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). 
-    * A minority of the freelance photographers did not follow this document (or indeed create images of professional quality).
-    * The uncompressed RAW photos should also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB Disk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
+    * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). A minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
+    * The uncompressed RAW photos are also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
 
 
 Available from the [metadata repository](https://github.com/twak/winsyn_metadata):
@@ -66,13 +45,14 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
 * _metadata_single_elements_
     * The crop information to identify single rectangular samples of windows.
     * These were created manually with the _crop_tool.py_ script by Tom, Michaella, and Prem, with the goals of identifying single windows that we could send to be per-pixel labelled and regularising the different equipment and styles of the many different photographers.
-        * Clusters of windows were sometimes annotated as a single window if they had shared frames.
+        * Clusters of windows were sometimes annotated as a single window if they had shared frames/interconnected patterns.
         * With glass-façades, we tried to take 2-3 repetitions in each direction.
-        * We tried to take no more than 4 similar windows from one façade.
+        * We tried to take no more than 4 similar windows from one façade - in one or multiple images.
         * We tried to keep the crops square where possible.
-    * This file also contains per-photo tags such as deletion and rotation/
+    * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
+    * This file also contains per-photo tags such as deletion (file should not included in dataset) and rotation (where exif rotation data is incorrect).
 * _metadata_window_labels_
-    * Per-pixel labels created by LYD for the first 3000 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://docs.google.com/document/d/1IXjsb6ZTtXJi8b5uPmS9S6IpxSV1OTaU4FDAbcrAxiw/edit).
+    * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://docs.google.com/document/d/1IXjsb6ZTtXJi8b5uPmS9S6IpxSV1OTaU4FDAbcrAxiw/edit).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
     * These labels mostly should not overlap.
 * _metadata_window_labels_2_
@@ -92,20 +72,19 @@ The following can be generated from the above:
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
     * _metadata_website/_crops.html similarly shows an icon for each crop.
     * _metadata_website/map _shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
-* _data_cook_{time.time}_
-    * Datasets of images cropped to particular sizes with or without accompanying labels by the [process_labels.py](https://github.com/twak/fast_crop/blob/master/process_labels.py) script.
+* _winsyn_cook_{time.time}.zip_
+    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py)  script.
 * _metadata_location_
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
 
 **Scripts from the [code repository](https://github.com/twak/fast_crop/blob/master/build_website.py)**
 
-These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by a vcs. 
+These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by vcs. 
 
-* [process_labels.py](https://github.com/twak/fast_crop/blob/master/process_labels.py) has two functions:
-    * creates image datasets using the crop (metadata_single_elements) data.
-    * create image + label datasets using the metadata_window_labels(_2) data.
+* [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py) creates image + label datasets using the metadata_window_labels(_2) data.
+* [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py) creates cropped rgb images from the metadata_single_elements data.
 * [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py)
-    * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver, e.g., Apache.
+    * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver (e.g., Apache).
 * [fast_crop.py](https://github.com/twak/fast_crop/blob/master/crop_tool.py)
     * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
     * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
@@ -118,7 +97,6 @@ These scripts expect to be run from the `data` directory - they tend not to take
     * outputs various statistics for the whole dataset.
 * figure_many_xxx.py
     * scripts used to create the figures for the paper.
-
 
 **Other notes**
 
