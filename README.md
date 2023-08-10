@@ -5,24 +5,6 @@
 <p style="text-align: right">
 <strong>WinSyn Dataset Description</strong></p>
 
-
-Todo before release
-
-
-
-* strip location?
-    * gpx files
-    * exif locations
-* remove identifying objects:
-    * faces
-    * number plates
-    * phone numbers
-* process all JPGs
-    * strip all exif
-    * remove deleted
-    * apply rotation
-* or do we force a contract on the data-users to avoid releasing such examples?
-
 WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. \
  \
 **File organisation** \
@@ -50,8 +32,6 @@ The project's data and code is split between different sources. Binary formatted
 Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. \
  \
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
-
-
 
 * _photos_
     * The photos (in JPG) format
@@ -99,13 +79,12 @@ The following can be generated from the above:
 
 **Scripts from the [code repository](https://github.com/twak/fast_crop/blob/master/build_website.py)**
 
-These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by a vcs. 
+These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by vcs. 
 
-* [process_labels.py](https://github.com/twak/fast_crop/blob/master/process_labels.py) has two functions:
-    * creates image datasets using the crop (metadata_single_elements) data.
-    * create image + label datasets using the metadata_window_labels(_2) data.
+* [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py) creates image + label datasets using the metadata_window_labels(_2) data.
+* [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py) creates cropped rgb images from the metadata_single_elements data.
 * [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py)
-    * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver, e.g., Apache.
+    * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver (e.g., Apache).
 * [fast_crop.py](https://github.com/twak/fast_crop/blob/master/crop_tool.py)
     * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
     * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
