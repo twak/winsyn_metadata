@@ -36,9 +36,8 @@ Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 * _photos_
     * The photos (in JPG) format
     * Any GPS tracks recorded during photo creation. These have assorted names. 
-    * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). 
-    * A minority of the freelance photographers did not follow this document (or indeed create images of professional quality).
-    * The uncompressed RAW photos should also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB Disk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
+    * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). A minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
+    * The uncompressed RAW photos are also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
 
 
 Available from the [metadata repository](https://github.com/twak/winsyn_metadata):
@@ -46,13 +45,14 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
 * _metadata_single_elements_
     * The crop information to identify single rectangular samples of windows.
     * These were created manually with the _crop_tool.py_ script by Tom, Michaella, and Prem, with the goals of identifying single windows that we could send to be per-pixel labelled and regularising the different equipment and styles of the many different photographers.
-        * Clusters of windows were sometimes annotated as a single window if they had shared frames.
+        * Clusters of windows were sometimes annotated as a single window if they had shared frames/interconnected patterns.
         * With glass-façades, we tried to take 2-3 repetitions in each direction.
-        * We tried to take no more than 4 similar windows from one façade.
+        * We tried to take no more than 4 similar windows from one façade - in one or multiple images.
         * We tried to keep the crops square where possible.
-    * This file also contains per-photo tags such as deletion and rotation/
+    * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
+    * This file also contains per-photo tags such as deletion (file should not included in dataset) and rotation (where exif rotation data is incorrect).
 * _metadata_window_labels_
-    * Per-pixel labels created by LYD for the first 3000 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://docs.google.com/document/d/1IXjsb6ZTtXJi8b5uPmS9S6IpxSV1OTaU4FDAbcrAxiw/edit).
+    * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://docs.google.com/document/d/1IXjsb6ZTtXJi8b5uPmS9S6IpxSV1OTaU4FDAbcrAxiw/edit).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
     * These labels mostly should not overlap.
 * _metadata_window_labels_2_
