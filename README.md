@@ -23,7 +23,7 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
+where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
