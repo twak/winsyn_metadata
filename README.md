@@ -36,10 +36,10 @@ Please observe our [dataset conditions](http://todo.com) of use at all times. Be
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 
 * _photos_
-    * The photos in JPG format
+    * The photos in jpg format and raw format.
+    * the file size is around 4Tb.
     <!--- * Any GPS tracks recorded during photo creation. These have assorted names.  (no current plan to release these) -->
     * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). A minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
-    * The uncompressed RAW photos are also be here in the same folder as the JPGs. 
 <!-- Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option! (now on globus) -->
 
 Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
@@ -69,7 +69,8 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
 The following can be generated from the above:
 
 * _metadata_website_
-    * The website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
+    * The very simple website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
+    * It should be hosted on your webserver (it fetches html content for the batches).
     * _metadata_website/_index.html shows all photographs. Select the radio button next to a batch to view all the photos for that batch. An icon with a red cross has been deleted. An icon with labels has been labelled.
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
     * _metadata_website/_crops.html similarly shows an icon for each crop.
