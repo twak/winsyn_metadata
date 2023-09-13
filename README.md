@@ -1,13 +1,16 @@
-<!-- Output copied to clipboard! -->
 
-<!-- Yay, no errors, warnings, or alerts! -->
-
-<p style="text-align: right">
-<strong>WinSyn Dataset Description</strong></p>
+**WinSyn Dataset**
 
 WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. 
 
- 
+This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use) and available from the Kaust datastore:
+
+* [9k labelled real photos at 1024px resolution]()
+* [80k 1024px photos of windows]()
+* [16k 512px synthetic renders of windows]()
+
+The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
+
 **File organisation** 
 
 The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  
@@ -20,8 +23,7 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
-
+where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
@@ -34,13 +36,13 @@ Please observe our [dataset conditions](http://todo.com) of use at all times. Be
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 
 * _photos_
-    * The photos (in JPG) format
-    * Any GPS tracks recorded during photo creation. These have assorted names. 
+    * The photos in jpg format and raw format.
+    * the file size is around 4Tb.
+    <!--- * Any GPS tracks recorded during photo creation. These have assorted names.  (no current plan to release these) -->
     * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). A minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
-    * The uncompressed RAW photos are also be here in the same folder as the JPGs. Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option!
+<!-- Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option! (now on globus) -->
 
-
-Available from the [metadata repository](https://github.com/twak/winsyn_metadata):
+Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
 
 * _metadata_single_elements_
     * The crop information to identify single rectangular samples of windows.
@@ -67,7 +69,8 @@ Available from the [metadata repository](https://github.com/twak/winsyn_metadata
 The following can be generated from the above:
 
 * _metadata_website_
-    * The website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
+    * The very simple website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
+    * It should be hosted on your webserver (it fetches html content for the batches).
     * _metadata_website/_index.html shows all photographs. Select the radio button next to a batch to view all the photos for that batch. An icon with a red cross has been deleted. An icon with labels has been labelled.
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
     * _metadata_website/_crops.html similarly shows an icon for each crop.
@@ -77,7 +80,7 @@ The following can be generated from the above:
 * _metadata_location_
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
 
-**Scripts from the [code repository](https://github.com/twak/fast_crop/blob/master/build_website.py)**
+**Scripts from the [code repository](https://github.com/twak/fast_crop)**
 
 These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by vcs. 
 
