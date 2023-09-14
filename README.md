@@ -38,7 +38,7 @@ Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 * _photos_
     * The photos in jpg format and raw format.
     * the file size is around 4Tb.
-    * The photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf). Adherance to this was generally good, but a minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
+    * The photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf). 
 
 Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
 
@@ -104,5 +104,5 @@ These scripts expect to be run from the `data` directory - they tend not to take
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
 * The batches started as a day of photography (for tom and michaella) or a contract (1 or 2 thousand images) for the upwork freelancers. 
 * The "tom_archive_xxx" folders are images taken before the project started and are from a variety of hardware and locations. Mostly we don't have location information for these.
-* The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world.
+* The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world. Adherance to the provided guidance document was generally good, but a minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
 * The guidance documents provided to the photographers and labellers evolved as edge-cases and issues with data collection were identified. For example, specific instructions for labelling unusual configurations of sunshades and Egyptian windows were added. The dates of major changes are noted at the top of these documents.
