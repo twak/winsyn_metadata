@@ -86,7 +86,7 @@ These scripts expect to be run from the `data` directory - they tend not to take
 * [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py) creates cropped rgb images from the metadata_single_elements data.
 * [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py)
     * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver (e.g., Apache).
-* [fast_crop.py](https://github.com/twak/fast_crop/blob/master/crop_tool.py)
+* [fast_crop.py](https://github.com/twak/fast_crop/blob/master/fast_crop.py)
     * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
     * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
     * the entire photo can also be annotated with 
@@ -94,7 +94,7 @@ These scripts expect to be run from the `data` directory - they tend not to take
         * _rot90, rot180, rot270 _- the photo has been manually rotated before cropping (after any exif-encoded rotate has been applied).
 * build_locations.py
     * creates the metadata_location folder containing different sources.
-* [summary.py](https://github.com/twak/fast_crop/blob/master/summary.py), 
+* [summary.py](https://github.com/twak/fast_crop/blob/master/figure_summary.py), 
     * outputs various statistics for the whole dataset.
 * figure_many_xxx.py
     * scripts used to create the figures for the paper.
