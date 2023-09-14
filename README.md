@@ -3,7 +3,7 @@
 
 WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. 
 
-This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use) and available from the Kaust datastore:
+This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use and) available from the Kaust datastore:
 
 * [9k labelled real photos at 1024px resolution]()
 * [80k 1024px photos of windows]()
@@ -23,7 +23,7 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usual ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
+where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usually ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
@@ -38,9 +38,7 @@ Available from the [Kaust datastore](https://repository.kaust.edu.sa/):
 * _photos_
     * The photos in jpg format and raw format.
     * the file size is around 4Tb.
-    <!--- * Any GPS tracks recorded during photo creation. These have assorted names.  (no current plan to release these) -->
-    * The photographers were provided with this [guidance document](https://docs.google.com/document/d/1_wCHtkXmdSMRhZUC7USt_LlgJ8gygK6s6dNCVQnCpM8/edit). A minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
-<!-- Due to the large size, the RAW images are available only upon demand. Currently this involves sending a USB harddisk and FedEx box to Kaust and we'll clone the dataset and return it to you. Please contact us to discuss this option! (now on globus) -->
+    * The photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf). 
 
 Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
 
@@ -54,7 +52,7 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
     * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
     * This file also contains per-photo tags such as deletion (file should not included in dataset) and rotation (where exif rotation data is incorrect).
 * _metadata_window_labels_
-    * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://docs.google.com/document/d/1IXjsb6ZTtXJi8b5uPmS9S6IpxSV1OTaU4FDAbcrAxiw/edit).
+    * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
     * These labels mostly should not overlap.
 * _metadata_window_labels_2_
@@ -88,7 +86,7 @@ These scripts expect to be run from the `data` directory - they tend not to take
 * [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py) creates cropped rgb images from the metadata_single_elements data.
 * [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py)
     * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver (e.g., Apache).
-* [fast_crop.py](https://github.com/twak/fast_crop/blob/master/crop_tool.py)
+* [fast_crop.py](https://github.com/twak/fast_crop/blob/master/fast_crop.py)
     * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
     * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
     * the entire photo can also be annotated with 
@@ -96,7 +94,7 @@ These scripts expect to be run from the `data` directory - they tend not to take
         * _rot90, rot180, rot270 _- the photo has been manually rotated before cropping (after any exif-encoded rotate has been applied).
 * build_locations.py
     * creates the metadata_location folder containing different sources.
-* [summary.py](https://github.com/twak/fast_crop/blob/master/summary.py), 
+* [summary.py](https://github.com/twak/fast_crop/blob/master/figure_summary.py), 
     * outputs various statistics for the whole dataset.
 * figure_many_xxx.py
     * scripts used to create the figures for the paper.
@@ -106,5 +104,5 @@ These scripts expect to be run from the `data` directory - they tend not to take
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
 * The batches started as a day of photography (for tom and michaella) or a contract (1 or 2 thousand images) for the upwork freelancers. 
 * The "tom_archive_xxx" folders are images taken before the project started and are from a variety of hardware and locations. Mostly we don't have location information for these.
-* The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world.
+* The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world. Adherance to the provided guidance document was generally good, but a minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
 * The guidance documents provided to the photographers and labellers evolved as edge-cases and issues with data collection were identified. For example, specific instructions for labelling unusual configurations of sunshades and Egyptian windows were added. The dates of major changes are noted at the top of these documents.
