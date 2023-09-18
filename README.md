@@ -31,7 +31,7 @@ _data/metadata_website/tom_london_20220418/IMG_0206.html_
  
 The project's data and code is split between different sources. Binary formatted JPG images are available from the Kaust data repository, while metadata and source code is available from our Github repos. 
 
-Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. 
+<!-- Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization.  -->
 
 Available from the [Kaust datastore](https://repository.kaust.edu.sa/handle/10754/694463):
 
