@@ -33,7 +33,7 @@ The project's data and code is split between different sources. Binary formatted
 
 Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization. 
 
-Available from the [Kaust datastore][https://repository.kaust.edu.sa/handle/10754/694463):
+Available from the [Kaust datastore](https://repository.kaust.edu.sa/handle/10754/694463):
 
 * _photos_
     * The photos in jpg format and raw format.
