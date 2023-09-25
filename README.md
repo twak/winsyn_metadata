@@ -3,11 +3,12 @@
 
 WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication xxx. 
 
-This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use and) available from the Kaust datastore:
+This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use and) available from the Kaust datastore from 30th September:
 
-* [9k labelled real photos at 1024px resolution]()
-* [80k 1024px photos of windows]()
-* [16k 512px synthetic renders of windows]()
+* [9k labelled real photos at 1024px resolution](https://repository.kaust.edu.sa/handle/10754/694580)
+* [89k 512px crops or 97k 1024px crops](https://repository.kaust.edu.sa/handle/10754/694580) 
+* [72k 2024px photos of windows](https://repository.kaust.edu.sa/handle/10754/694585)
+* [16k 512px synthetic renders of windows](tba)
 
 The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
 
