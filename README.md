@@ -8,7 +8,7 @@ This document describes the _full_ dataset, it contains the high resolution phot
 * [9k labeled real photos at 1024px resolution](https://repository.kaust.edu.sa/handle/10754/694580)
 * [89k 512px crops or 97k 1024px crops](https://repository.kaust.edu.sa/handle/10754/694580) 
 * [72k 2024px photos of windows](https://repository.kaust.edu.sa/handle/10754/694585)
-* [16k 512px synthetic renders of windows](tba)
+* [21k 512px synthetic renders of windows](tba)
 
 The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
 
