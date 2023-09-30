@@ -81,26 +81,9 @@ The following can be generated from the above:
 * _metadata_location_
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
 
-**Scripts from the [code repository](https://github.com/twak/fast_crop)**
+**Data processing scripts from the [code repository](https://github.com/twak/fast_crop)**
 
-These scripts expect to be run from the `data` directory - they tend not to take command line arguments, but rely on the cwd & editing scripts to change the parameters in a way which can be tracked by vcs. 
-
-* [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py) creates image + label datasets using the metadata_window_labels(_2) data.
-* [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py) creates cropped rgb images from the metadata_single_elements data.
-* [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py)
-    * creates a website showing photos and crops by batches, and the photo locations. This is output to the metadata_website folder, which can be hosted by a webserver (e.g., Apache).
-* [fast_crop.py](https://github.com/twak/fast_crop/blob/master/fast_crop.py)
-    * the interactive tool used to create the metadata_single_elements folder. Allows windows (and other things) to be annotated.
-    * the _tags.py_ describes the different types of rectangular crops that may be annotated. Only the window classes are reliably applied. The window subclasses  (glass_facade, church, shop, abnormal, windows) might not be so reliable. The other classes (façade, material, private) are quite irregular.
-    * the entire photo can also be annotated with 
-        * _deleted - _the photo has been deleted from the dataset due to poor quality, containing no windows, or only containing windows repeated elsewhere in the batch
-        * _rot90, rot180, rot270 _- the photo has been manually rotated before cropping (after any exif-encoded rotate has been applied).
-* build_locations.py
-    * creates the metadata_location folder containing different sources.
-* [summary.py](https://github.com/twak/fast_crop/blob/master/figure_summary.py), 
-    * outputs various statistics for the whole dataset.
-* figure_many_xxx.py
-    * scripts used to create the figures for the paper.
+A collection of scripts to process the data are available from the fast_crop repo. They include scripts to render rops, labels, build the website, crop photos, summarize and validate the dataset, and create some of the published figures.
 
 **Other notes**
 
