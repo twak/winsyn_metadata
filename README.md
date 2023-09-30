@@ -7,9 +7,9 @@ Note: location data is still in progress and will be reviewed next week.
 
 This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use and) available from the Kaust datastore:
 
-* [9k labeled real photos at 1024px resolution](https://repository.kaust.edu.sa/handle/10754/694580)
-* [89k 512px crops or 97k 1024px crops](https://repository.kaust.edu.sa/handle/10754/694580) 
-* [72k 2024px photos of windows](https://repository.kaust.edu.sa/handle/10754/694585)
+* [9k labeled real photos at 1024px resolution](http://dx.doi.org/10.25781/KAUST-8YL8A)
+* [89k 512px crops or 97k 1024px crops](http://dx.doi.org/10.25781/KAUST-8YL8A)  
+* [72k 2024px photos of windows](http://dx.doi.org/10.25781/KAUST-LWC2Z)
 * [21k 512px synthetic renders of windows](tba) these will be released shortly.
 
 The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
@@ -32,11 +32,9 @@ _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
 **Where to get the data** 
  
-The project's data and code is split between different sources. Binary formatted JPG images are available from the Kaust data repository, while metadata and source code is available from our Github repos. 
+The project's data and code is split between different sources. Images files are available from the Kaust data repository, while metadata and source code is available in this github repo. 
 
-<!-- Please observe our [dataset conditions](http://todo.com) of use at all times. Be aware of situations where data may leak, e.g., due to loose directory permissions, caching, or model memorization.  -->
-
-Available from the [Kaust datastore](https://repository.kaust.edu.sa/handle/10754/694463):
+Jpg and raw files are on the [Kaust/Globus datastore](http://dx.doi.org/10.25781/KAUST-6DZ5P): 
 
 * _photos_
     * The photos in jpg format and raw format.
