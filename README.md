@@ -41,9 +41,9 @@ The project's data and code is split between different sources. Images files are
 Jpg and raw files are on the [Kaust/Globus datastore](http://dx.doi.org/10.25781/KAUST-6DZ5P): 
 
 * _photos_
-    * The photos in jpg format and raw format.
-    * the file size is around 4Tb.
-    * The photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf). 
+    * the photos in jpg format and raw format.
+    * the total file size is around 4Tb.
+    * the photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf). 
 
 Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
 
