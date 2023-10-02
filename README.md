@@ -87,7 +87,7 @@ The following can be generated from the above:
 
 A collection of scripts to process the data are available from the fast_crop repo. They include scripts to render rops, labels, build the website, crop photos, summarize and validate the dataset, and create some of the published figures.
 
-<img src="[https://your-image-url.type](https://github.com/twak/winsyn_metadata/blob/docs/images/fast_crop_eg.jpg?raw=true)" width="50%" height="50%">
+<img src="https://github.com/twak/winsyn_metadata/blob/docs/images/fast_crop_eg.jpg?raw=true" width="50%" height="50%">
 
 **Other notes**
 
