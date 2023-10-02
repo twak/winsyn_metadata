@@ -1,5 +1,6 @@
 
-***WinSyn Dataset***
+# WinSyn Dataset
+
 ![Teaser figure showing real photos, crops, and synthetic images of building windows](https://github.com/twak/winsyn_metadata/blob/docs/images/overview.jpg?raw=true)
 
 WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication _A High Resolution Testbed for Synthetic Data_ by Tom Kelly (Kaust), John Femiani (MiamiOh), and Peter Wonka (Kaust). A pre-print of the paper will be available imminently.
@@ -15,7 +16,7 @@ This document describes the _full_ dataset, it contains the high resolution phot
 
 The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
 
-**File organisation** 
+### file organisation
 
 The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  
  
@@ -31,7 +32,7 @@ where ** is a metadata folder (metadata_single_elements, metadata_window_labels,
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
-**Where to get the data** 
+### where to download the data
  
 ![example windows and crop size distributions](https://github.com/twak/winsyn_metadata/blob/docs/images/morewindowsthanu.jpg?raw=true)
 
@@ -82,13 +83,13 @@ The following can be generated from the above:
 * _metadata_location_
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
 
-**Data processing scripts from the [code repository](https://github.com/twak/fast_crop)**
+### data processing scripts from the [code repository](https://github.com/twak/fast_crop)
 
 A collection of scripts to process the data are available from the fast_crop repo. They include scripts to render rops, labels, build the website, crop photos, summarize and validate the dataset, and create some of the published figures.
 
 <img src="https://github.com/twak/winsyn_metadata/blob/docs/images/fast_crop_eg.jpg?raw=true" width="50%" height="50%">
 
-**Other notes**
+### other notes
 
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
 * The batches started as a day of photography (for tom and michaella) or a contract (1 or 2 thousand images) for the upwork freelancers. 
