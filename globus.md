@@ -31,7 +31,7 @@ Finally, we can start the transfer of the dataset (all 4Tb of it) to `/home/twak
 globus transfer $winsyn:/ $local_endpoint:/home/twak/winsyn
 ```
 
-You can view the progress [online](https://app.globus.org/activity). Keep a note of the task id to view or cancel it on the command line:
+You can view the progress [online](https://app.globus.org/activity). Keep a note of the task id to view the status on the command line:
 ```
 globus task show 23425d56-ffff-11ee-b9d7-11fee6a821c0
 ```
