@@ -39,7 +39,7 @@ _data/metadata_website/tom_london_20220418/IMG_0206.html_
 The project's data and code is split between different sources. Images files are available from the Kaust data repository, while metadata and source code is available in this github repo. 
 
 <!-- [doi of datastore](http://dx.doi.org/10.25781/KAUST-6DZ5P) -->
-Jpg and raw files are available from the [Globus datastore](https://app.globus.org/file-manager?origin_id=ba993270-4516-48b9-af7c-77e890865733). [My notes on setting up a bulk transfer from Globus.](https://github.com/twak/winsyn_metadata/blob/docs/globus.md). 
+Jpg and raw files are available from the [Globus datastore](https://app.globus.org/file-manager?origin_id=ba993270-4516-48b9-af7c-77e890865733) ([hints for using Globus.](https://github.com/twak/winsyn_metadata/blob/docs/globus.md)): 
 
 * _photos_
     * the photos in jpg format and raw format.
