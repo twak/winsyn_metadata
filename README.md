@@ -44,7 +44,7 @@ Jpg and raw files are available from the [Globus datastore](https://app.globus.o
 * _photos_
     * the photos in jpg format and raw format
     * the total file size is around 4Tb
-    * (my notes on [using Globus](https://github.com/twak/winsyn_metadata/blob/docs/globus.md)
+    * my notes on [using Globus](https://github.com/twak/winsyn_metadata/blob/docs/globus.md)
     * the photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf) 
 
 Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
