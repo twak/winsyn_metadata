@@ -18,9 +18,9 @@ The rest of this document describes the organisation of the full dataset, and th
 
 ### file organisation
 
-The data directory is the "root" of the project. This contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.  
+The `data` directory is the "root" of the project. It contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.
  
-The contents of the folders are divided into _batches_ (subfolders) such as _tom_london_20220418_ for easier processing. They are named for the first name of the photographer, principal location, and date. For example, metadata relating to the image:
+The contents of these folders are divided into _batches_ (subfolders) such as _tom_london_20220418_ for easier processing. They are named for the first name of the photographer, principal location, and date. For example, metadata relating to the image:
 
  _data/photos/tom_london_20220418/IMG_0206.JPG_ 
 
@@ -28,7 +28,7 @@ can be found in:
 
 _data/**/tom_london_20220418/IMG_0206.*_
 
-where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usually ._json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
+where ** is a metadata folder (metadata_single_elements, metadata_window_labels, ...) and * is an extension dependent on the data type (usually _.json_). You can see a summary of available information for each photograph at the bottom of the photo webpage: 
 
 _data/metadata_website/tom_london_20220418/IMG_0206.html_
 
@@ -57,7 +57,7 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
         * We tried to take no more than 4 similar windows from one façade - in one or multiple images.
         * We tried to keep the crops square where possible.
     * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
-    * This file also contains per-photo tags such as `deleted` (file should not included in dataset) and rotation (where exif rotation data is incorrect).
+    * This file also contains per-photo tags such as `deleted` (file should not included in dataset) and rotation: `rot90`, `rot180`, `rot270` (where exif rotation data is incorrect).
 * _metadata_window_labels_
     * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
