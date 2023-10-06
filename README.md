@@ -59,7 +59,7 @@ Other metadata available from this [repository](https://github.com/twak/winsyn_m
     * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
     * This file also contains per-photo tags such as `deleted` (file should not included in dataset) and rotation: `rot90`, `rot180`, `rot270` (where exif rotation data is incorrect).
 * _metadata_window_labels_
-    * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf).
+    * Per-pixel labels created by [LYD](https://labelyourdata.com/) for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
     * These labels mostly should not overlap.
 * _metadata_window_labels_2_
