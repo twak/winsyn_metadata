@@ -18,7 +18,7 @@ The rest of this document describes the organisation of the full dataset, and th
 
 ### file organisation
 
-The `data` directory is the "root" of the project. It contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.
+The _data_ directory is the "root" of the project. It contains various folders (_photos_, _metadata_single_elments_, _metadata_website_, etc…) which each contain a different type of data.
  
 The contents of these folders are divided into _batches_ (subfolders) such as _tom_london_20220418_ for easier processing. They are named for the first name of the photographer, principal location, and date. For example, metadata relating to the image:
 
