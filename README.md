@@ -47,7 +47,7 @@ Jpg and raw files are available from the [Globus datastore](https://app.globus.o
     * my notes on [using Globus](https://github.com/twak/winsyn_metadata/blob/docs/globus.md)
     * the photographers were provided with this [guidance document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf) 
 
-Available from this [metadata repository](https://github.com/twak/winsyn_metadata):
+Other metadata available from this [repository](https://github.com/twak/winsyn_metadata):
 
 * _metadata_single_elements_
     * The crop information to identify single rectangular samples of windows.
@@ -72,7 +72,7 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
     * We were unable to verify the location accuracy of the batches `mussa_dar_es_salaam_20221212`, `jan_cebu_20230120`, and `sarabjot_newdehli_20230315`.
 
 
-The following can be generated once you have the raw data and meta repository:
+The following can be generated once you have the raw data and meta repository :
 
 * _metadata_website_
     * The very simple website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
