@@ -56,7 +56,7 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
         * We tried to take no more than 4 similar windows from one façade - in one or multiple images.
         * We tried to keep the crops square where possible.
     * The tags `window`, `door`, `glass_facade`, `shop`, `church` and `abnormal` are treated as windows. Some other tags (`materials`, `facades`) are available but are not consistently applied.
-    * This file also contains per-photo tags such as deletion (file should not included in dataset) and rotation (where exif rotation data is incorrect).
+    * This file also contains per-photo tags such as `deleted` (file should not included in dataset) and rotation (where exif rotation data is incorrect).
 * _metadata_window_labels_
     * Per-pixel labels created by LYD for the first 3002 images. Annotated for the first 11 (12 including _none_) classes. The instructions given to the labelers were collated in this [document](https://github.com/twak/winsyn_metadata/raw/docs/pdfs/labelling_instructions.pdf).
     * Described as polygons; per-pixel bitmap datasets can be created with [process_labels](https://github.com/twak/fast_crop/blob/master/process_labels.py).py.
@@ -81,8 +81,8 @@ The following can be generated once you have the raw data and meta repository:
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
     * metadata_website/crops.html similarly shows an icon for each crop.
     * metadata_website/map shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
-* metadata_cook/*.zip
-    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py)  script.
+* metadata_cook/dataset_cook_crops_{resolution}px_{time.time()}.zip
+    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops.py)  script. Simiarly for crops with labels.
 <!-- * _metadata_location_ NOW IN REPO!
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves. -->
 
