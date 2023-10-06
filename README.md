@@ -82,7 +82,7 @@ The following can be generated once you have the raw data and meta repository:
     * metadata_website/crops.html similarly shows an icon for each crop.
     * metadata_website/map shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
 * metadata_cook/dataset_cook_crops_{resolution}px_{time.time()}.zip
-    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops.py)  script. Simiarly for crops with labels.
+    * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops.py](https://github.com/twak/fast_crop/blob/master/render_crops.py)  script. Simiarly for [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py).
 <!-- * _metadata_location_ NOW IN REPO!
     * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves. -->
 
