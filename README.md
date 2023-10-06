@@ -67,22 +67,24 @@ Available from this [metadata repository](https://github.com/twak/winsyn_metadat
 * _metadata_location_
     * Describes location of photographs
     * _locations_data.json_ contains the per-batch location information used for creating per-image location description files.
-    * The locations are of varying degrees of accuracy. The image source can be _coarse_ (located only by a named city), _camera_ (a GPS location captured by the camera), or _track_ (a location computed from the photograph time and a separately captured GPS track). Several batches have no geolocation information available.
+    * The locations are of varying degrees of accuracy. The image source can be `coarse` (located only by a named city), `camera` (a GPS location captured by the camera), or `track` (a location computed from the photograph time and a separately captured GPS track). Several batches have no geolocation information available.
+    * We were unable to verify the location accuracy of the batches `mussa_dar_es_salaam_20221212`, `jan_cebu_20230120`, and `sarabjot_newdehli_20230315`.
 
 
-The following can be generated from the above:
+The following can be generated once you have the raw data and meta repository:
 
 * _metadata_website_
     * The very simple website created by the [build_website.py](https://github.com/twak/fast_crop/blob/master/build_website.py) script.
-    * It should be hosted on your webserver (it fetches html content for the batches).
-    * _metadata_website/_index.html shows all photographs. Select the radio button next to a batch to view all the photos for that batch. An icon with a red cross has been deleted. An icon with labels has been labelled.
+    * An example of the site is currently hosted by [miamiOh](https://vision.csi.miamioh.edu/data/archinet/data/metadata_website/index.html).
+    * It should be hosted on a webserver (it fetches html content for the batches).
+    * metadata_website/index.html shows all photographs. Select the radio button next to a batch to view all the photos for that batch. An icon with a red cross has been deleted. An icon with labels has been labelled.
     * Clicking on an icon will take you to the webpage summarising all available information for each photo.
-    * _metadata_website/_crops.html similarly shows an icon for each crop.
-    * _metadata_website/map _shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
-* _winsyn_cook_{time.time}.zip_
+    * metadata_website/crops.html similarly shows an icon for each crop.
+    * metadata_website/map shows the locations of the photos. Zooming in and clicking on a blue marker will show an icon and link to the photo summary page.
+* metadata_cook/*.zip
     * Datasets of images cropped to particular sizes with or without accompanying labels by the [render_crops_and_labels.py](https://github.com/twak/fast_crop/blob/master/render_crops_and_labels.py)  script.
-* _metadata_location_
-    * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves.
+<!-- * _metadata_location_ NOW IN REPO!
+    * Computed by the build_locations.py script using information from _locations_data.json_ and the photos info/tracks themselves. -->
 
 ### data processing scripts from the [code repository](https://github.com/twak/fast_crop)
 
