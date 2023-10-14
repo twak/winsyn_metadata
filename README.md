@@ -91,6 +91,21 @@ A collection of scripts to process the data are available from the fast_crop rep
 
 <img src="https://github.com/twak/winsyn_metadata/blob/docs/images/fast_crop_eg.jpg?raw=true" width="50%" height="50%">
 
+### citing
+
+Please site the below paper when using our work.
+
+```
+@misc{kelly2023winsyn,
+      title={WinSyn: A High Resolution Testbed for Synthetic Data}, 
+      author={Tom Kelly and John Femiani and Peter Wonka},
+      year={2023},
+      eprint={2310.08471},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ### other notes
 
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
