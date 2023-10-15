@@ -14,7 +14,7 @@ This document describes the _full_ dataset, it contains the high resolution phot
 Our synthetic renders are also available:
 
 * [synthetic renders of windows and variations (alpha release)](https://vision.csi.miamioh.edu/data/archinet_public/winsynthetic_jpg_v0.zip)
-* [synthetic renders of windows: render-time "ms" dataset](https://vision.csi.miamioh.edu/data/archinet_public/winsynthetic_jpg_ms_v0.zip)
+* [synthetic renders of windows: render-time "ms" dataset (alpha release)](https://vision.csi.miamioh.edu/data/archinet_public/winsynthetic_jpg_ms_v0.zip)
 
 The rest of this document describes the organisation of the full dataset, and the tools available to process it. As well as the original jpg and raw photos, you can find labels polygons, crop information, location information, and a simple website to view the data. There are tools to generate the above pre-rendered datasets and crop images.
 
