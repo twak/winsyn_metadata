@@ -97,7 +97,7 @@ A collection of scripts to process the data are available from the fast_crop rep
 
 ### citing
 
-Please site the below paper when using our work.
+Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our work.
 
 ```
 @misc{kelly2023winsyn,
