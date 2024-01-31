@@ -95,21 +95,6 @@ A collection of scripts to process the data are available from the fast_crop rep
 
 <img src="https://github.com/twak/winsyn_metadata/blob/docs/images/fast_crop_eg.jpg?raw=true" width="50%" height="50%">
 
-### citing
-
-Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our work.
-
-```
-@misc{kelly2023winsyn,
-      title={WinSyn: A High Resolution Testbed for Synthetic Data}, 
-      author={Tom Kelly and John Femiani and Peter Wonka},
-      year={2023},
-      eprint={2310.08471},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
-
 ### other notes
 
 * The dataset was grown organically as resources and applications were added to the project. Therefore early image metadata may be of lower quality than later. 
@@ -124,3 +109,18 @@ Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our w
 We would like to thank our lead photographers Michaela Nömayr and Florian Rist, and engineer Prem Chedella, as well as our contributing photographers: Aleksandr Aleshkin, Angela Markoska, Artur Oliveira, Brian Benton, Chris West, Christopher Byrne, Elsayed Saafan, Florian Rist, George Iliin, Ignacio De Barrio, Jan Cuales, Kaitlyn Jackson, Kalina Mondzholovska, Kubra Ayse Guzel, Lukas Bornheim, Maria Jose Balestena, Michaela Nömayr, Mihai-Alexandru Filoneanu, Mokhtari Sid Ahmed Salim, Mussa Ubapa, Nestor Angulo Caballero, Nicklaus Suarez, Peter Fountain, Prem Chedella, Samantha Martucci, Sarabjot Singh, Scarlette Li, Serhii Malov, Simon R. A. Kelly, Stephanie Foden, Surafel Sunara, Tadiyos Shala, Susana Gomez, Vasileios Notis, Yuan Yuan, and finally [LYD](https://labelyourdata.com/) for the labeling.
 
 We also thank the blender procedural artists Gabriel de Laubier for the [UCP Wood material](https://www.blendernation.com/2017/10/20/procedural-cc-0-pbr-wood-shader/) and Simon Thommes for the fantastic [Br'cks material](https://simonthommes.gumroad.com/l/Brcks). Both were modified and used in our procedural model.
+
+### citing
+
+Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our work.
+
+```
+@misc{kelly2023winsyn,
+      title={WinSyn: A High Resolution Testbed for Synthetic Data}, 
+      author={Tom Kelly and John Femiani and Peter Wonka},
+      year={2023},
+      eprint={2310.08471},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
