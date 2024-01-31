@@ -1,5 +1,5 @@
 
-# WinSyn Real Photo Dataset
+# WinSyn: Real Photo Dataset
 
 ![Teaser figure showing real photos, crops, and synthetic images of building windows](https://github.com/twak/winsyn_metadata/blob/docs/images/overview.jpg?raw=true)
 
