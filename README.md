@@ -117,6 +117,7 @@ Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our w
 * The "tom_archive_xxx" folders are images taken before the project started and are from a variety of hardware and locations. Mostly we don't have location information for these.
 * The exploratory datasets were created by tom (on holiday) in UK/Denmark, later Michaella contributed images from Austria and Germany. In the third phase we contracted freelancers on the upwork platform to collect images from other locations around the world. Adherance to the provided guidance document was generally good, but a minority of the freelance photographers did not follow this document - these were largely deleted during cropping.
 * The guidance documents provided to the photographers and labellers evolved as edge-cases and issues with data collection were identified. For example, specific instructions for labelling unusual configurations of sunshades and Egyptian windows were added. The dates of major changes are noted at the top of these documents.
+* There is an `easy` parition containing only easy labeled crops. It's about 4k images. We manually selected rectnagular windows with few other classes. You can find the parition in [the easy branch](https://github.com/twak/winsyn_metadata/tree/easy).
 
 ### acknowledgements
 
