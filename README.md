@@ -3,7 +3,7 @@
 
 ![Teaser figure showing real photos, crops, and synthetic images of building windows](https://github.com/twak/winsyn_metadata/blob/docs/images/overview.jpg?raw=true)
 
-WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication [A High Resolution Testbed for Synthetic Data](https://arxiv.org/abs/2310.08471) by Tom Kelly (Kaust), John Femiani (MiamiOh), and Peter Wonka (Kaust).
+WinSyn is a dataset of photographs of building windows from around the world. It is described in the publication [A High Resolution Testbed for Synthetic Data](https://arxiv.org/abs/2310.08471) by Tom Kelly (Kaust), John Femiani (MiamiOh), and Peter Wonka (Kaust). A short video introduction is [here](https://youtu.be/Ri-1iq4PBuc).
 
 This document describes the _full_ dataset, it contains the high resolution photots - with jpg and raw files as output from the camera. There are also _pre-rendered_ datasets which make various assumptions. These are (probably easier to use and) available from the Kaust datastore:
 
