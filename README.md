@@ -115,12 +115,11 @@ We also thank the blender procedural artists Gabriel de Laubier for the [UCP Woo
 Please site the below [paper](https://arxiv.org/abs/2310.08471) if you use our work.
 
 ```
-@misc{kelly2023winsyn,
-      title={WinSyn: A High Resolution Testbed for Synthetic Data}, 
-      author={Tom Kelly and John Femiani and Peter Wonka},
-      year={2023},
-      eprint={2310.08471},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{winsyn,
+  title={WinSyn: A High Resolution Testbed for Synthetic Data},
+  author={Tom Kelly and John Femiani and Peter Wonka},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  month = {June},
+  year={2024}
 }
 ```
